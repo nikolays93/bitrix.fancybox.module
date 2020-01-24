@@ -18,6 +18,13 @@ $arParams["EDIT_TEMPLATE"] = strlen($arParams["EDIT_TEMPLATE"]) > 0 ? $arParams[
 $bHasPath = ($arParams["AREA_FILE_SHOW"] == 'file');
 $sRealFilePath = $_SERVER["REAL_FILE_PATH"];
 
+if('url' == $arParams["AREA_FILE_SHOW"])
+{
+	/** @var CBitrixComponent $this */
+	$this->IncludeComponentTemplate('url');
+	return;
+}
+
 $io = CBXVirtualIo::GetInstance();
 
 if (!$bHasPath)

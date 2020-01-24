@@ -1,7 +1,9 @@
-<?
+<?php
 $MESS ['FANCYBOX_PAGE'] = "for page";
 $MESS ['FANCYBOX_SECT'] = "for section";
 $MESS ['FANCYBOX_FILE'] = "from file";
+$MESS ['FANCYBOX_URL'] = "custom url";
+$MESS ['FANCYBOX_URL_PATH'] = "path to include";
 $MESS ['FANCYBOX_PARAMS'] = "Component parameters";
 $MESS ['FANCYBOX_BUTTON_PARAMS'] = "Call button parameters";
 $MESS ['FANCYBOX_AREA_FILE_SHOW'] = "Show popup include area";

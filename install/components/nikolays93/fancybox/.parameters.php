@@ -1,7 +1,11 @@
 <?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 
-$arType = array("page" => GetMessage("FANCYBOX_PAGE"), "sect" => GetMessage("FANCYBOX_SECT"));
+$arType = array(
+	"page" => GetMessage("FANCYBOX_PAGE"),
+	"sect" => GetMessage("FANCYBOX_SECT"),
+	"url" => GetMessage("FANCYBOX_URL"),
+);
 if ($GLOBALS['USER']->CanDoOperation('edit_php'))
 {
 	$arType["file"] = GetMessage("FANCYBOX_FILE");
@@ -58,12 +62,24 @@ if ($GLOBALS['USER']->CanDoOperation('edit_php') && $arCurrentValues["AREA_FILE_
 }
 else
 {
-	$arComponentParameters["PARAMETERS"]["AREA_FILE_SUFFIX"] = array(
-		"NAME" => GetMessage("FANCYBOX_AREA_FILE_SUFFIX"), 
-		"TYPE" => "STRING",
-		"DEFAULT" => "inc",
-		"PARENT" => "PARAMS",
-	);
+	if ("url" == $arCurrentValues["AREA_FILE_SHOW"])
+	{
+		$arComponentParameters["PARAMETERS"]["URL_PATH"] = array(
+			"NAME" => GetMessage("FANCYBOX_URL_PATH"), 
+			"TYPE" => "STRING",
+			"DEFAULT" => "#",
+			"PARENT" => "PARAMS",
+		);
+	}
+	else
+	{
+		$arComponentParameters["PARAMETERS"]["AREA_FILE_SUFFIX"] = array(
+			"NAME" => GetMessage("FANCYBOX_AREA_FILE_SUFFIX"), 
+			"TYPE" => "STRING",
+			"DEFAULT" => "inc",
+			"PARENT" => "PARAMS",
+		);
+	}
 
 	if ($arCurrentValues["AREA_FILE_SHOW"] == "sect")
 	{

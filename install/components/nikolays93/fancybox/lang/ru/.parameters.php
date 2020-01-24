@@ -1,7 +1,9 @@
-<?
+<?php
 $MESS ['FANCYBOX_PAGE'] = "для страницы";
 $MESS ['FANCYBOX_SECT'] = "для раздела";
 $MESS ['FANCYBOX_FILE'] = "из файла";
+$MESS ['FANCYBOX_URL'] = "произвольная ссылка";
+$MESS ['FANCYBOX_URL_PATH'] = "путь до включаемой области";
 $MESS ['FANCYBOX_PARAMS'] = "Параметры компонента";
 $MESS ['FANCYBOX_BUTTON_PARAMS'] = "Параметры кнопки вызова окна";
 $MESS ['FANCYBOX_AREA_FILE_SHOW'] = "Показывать всплывающее окно";
