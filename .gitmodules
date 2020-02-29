@@ -1,0 +1,3 @@
+[submodule "install/components/nikolays93/fancybox"]
+	path = install/components/nikolays93/fancybox
+	url = https://github.com/nikolays93/bitrix.fancybox.component.git
